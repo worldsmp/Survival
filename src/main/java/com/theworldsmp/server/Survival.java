@@ -22,15 +22,15 @@ public class Survival extends JavaPlugin {
 		final ItemStack quartzItem  = new ItemStack(Material.QUARTZ_BLOCK, 4);
 		final NamespacedKey quartzKey = new NamespacedKey(this, "quartz_key");
 		final ShapelessRecipe quartzRecipe = new ShapelessRecipe(quartzKey, quartzItem);
-
 		quartzRecipe.addIngredient(4, Material.QUARTZ);
-		Bukkit.addRecipe(quartzRecipe);
+
 
 		final ItemStack brickItem  = new ItemStack(Material.BRICKS, 4);
 		final NamespacedKey brickKey = new NamespacedKey(this, "brick_key");
 		final ShapelessRecipe brickRecipe = new ShapelessRecipe(brickKey, brickItem);
-
 		brickRecipe.addIngredient(4, Material.BRICK);
+
+		Bukkit.addRecipe(quartzRecipe);
 		Bukkit.addRecipe(brickRecipe);
 	}
 }
