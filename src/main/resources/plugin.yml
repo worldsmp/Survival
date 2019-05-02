@@ -3,3 +3,4 @@ version: 1.0.1
 description: WorldSMP survival plugin.
 author: Spacey
 main: com.theworldsmp.server.Survival
+api-version: 1.14
