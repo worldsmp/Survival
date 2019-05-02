@@ -18,19 +18,17 @@ public class Survival extends JavaPlugin {
 	public void onDisable() {
 	}
 
+	public void createShapelessRecipe(Material outputItem, int outputAmount, String key, Material inputItem, int inputAmount) {
+		final ItemStack recipeStack = new ItemStack(outputItem, outputAmount);
+		final NamespacedKey recipeKey = new NamespacedKey(this, key);
+		final ShapelessRecipe itemRecipe = new ShapelessRecipe(recipeKey, recipeStack);
+
+		itemRecipe.addIngredient(inputAmount, inputItem);
+		Bukkit.addRecipe(itemRecipe);
+	}
+
 	private void loadRecipes() {
-		final ItemStack quartzItem  = new ItemStack(Material.QUARTZ_BLOCK, 4);
-		final NamespacedKey quartzKey = new NamespacedKey(this, "quartz_key");
-		final ShapelessRecipe quartzRecipe = new ShapelessRecipe(quartzKey, quartzItem);
-		quartzRecipe.addIngredient(4, Material.QUARTZ);
-
-
-		final ItemStack brickItem  = new ItemStack(Material.BRICKS, 4);
-		final NamespacedKey brickKey = new NamespacedKey(this, "brick_key");
-		final ShapelessRecipe brickRecipe = new ShapelessRecipe(brickKey, brickItem);
-		brickRecipe.addIngredient(4, Material.BRICK);
-
-		Bukkit.addRecipe(quartzRecipe);
-		Bukkit.addRecipe(brickRecipe);
+		createShapelessRecipe(Material.QUARTZ_BLOCK, 4, "quartz_key", Material.QUARTZ, 4);
+		createShapelessRecipe(Material.BRICKS, 4, "bricks_key", Material.BRICK, 4);
 	}
 }
