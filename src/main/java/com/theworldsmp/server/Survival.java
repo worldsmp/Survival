@@ -79,7 +79,7 @@ public class Survival extends JavaPlugin {
 						} else {
 							for (final Player p : Bukkit.getOnlinePlayers()) {
 								if (p.getWorld() == event.getPlayer().getWorld()) {
-									p.sendMessage(ChatColor.AQUA + "Someone is sleeping (" + inBed + " Total)");
+									p.sendMessage(ChatColor.AQUA + "Someone is sleeping (" + inBed + "/" + Bukkit.getOnlinePlayers().size() / 2 + ")");
 								}
 							}
 						}
