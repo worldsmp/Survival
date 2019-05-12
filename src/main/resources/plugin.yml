@@ -1,6 +1,13 @@
 name: worldSurvival
-version: 1.0.2
+version: 1.1.0
 description: WorldSMP survival plugin.
 author: Spacey
 main: com.theworldsmp.server.Survival
 api-version: 1.14
+commands:
+  message:
+    aliases: [msg, pm, whisper]
+    description: Private message a player
+  reply:
+    aliases: [r]
+    description: Private message the last player

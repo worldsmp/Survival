@@ -1,4 +1,4 @@
-package com.theworldsmp.utils;
+package com.theworldsmp.server.utils;
 
 import org.bukkit.Bukkit;
 
