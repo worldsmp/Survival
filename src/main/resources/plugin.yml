@@ -6,7 +6,7 @@ main: com.theworldsmp.server.Survival
 api-version: 1.14
 commands:
   message:
-    aliases: [msg, pm, whisper]
+    aliases: [msg, pm, whisper, tell]
     description: Private message a player
   reply:
     aliases: [r]
