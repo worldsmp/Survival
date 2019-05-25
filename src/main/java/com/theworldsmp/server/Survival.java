@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.theworldsmp.server.commands.MessageCommand;
 import com.theworldsmp.server.commands.ReplyCommand;
+import com.theworldsmp.server.events.MoveEvent;
 import com.theworldsmp.server.events.SleepEvent;
 import com.theworldsmp.server.utils.MessageHandler;
 
@@ -23,6 +24,7 @@ public class Survival extends JavaPlugin {
 		handler = new MessageHandler(this);
 
 		Bukkit.getPluginManager().registerEvents(new SleepEvent(this), this);
+		Bukkit.getPluginManager().registerEvents(new MoveEvent(this), this);
 
 		getCommand("message").setExecutor(new MessageCommand(this));
 		getCommand("reply").setExecutor(new ReplyCommand(this));
