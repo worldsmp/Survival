@@ -1,4 +1,4 @@
-package com.theworldsmp.server.events;
+package com.theworldsmp.survival.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,8 +9,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import com.theworldsmp.server.Survival;
-import com.theworldsmp.server.utils.IsDay;
+import com.theworldsmp.survival.Survival;
+import com.theworldsmp.survival.utils.IsDay;
 
 public class SleepEvent implements Listener {
 

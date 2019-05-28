@@ -1,4 +1,4 @@
-package com.theworldsmp.server.events;
+package com.theworldsmp.survival.events;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -10,7 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-import com.theworldsmp.server.Survival;
+import com.theworldsmp.survival.Survival;
 
 public class MoveEvent implements Listener {
 

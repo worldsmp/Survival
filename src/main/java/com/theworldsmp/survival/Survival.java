@@ -1,4 +1,4 @@
-package com.theworldsmp.server;
+package com.theworldsmp.survival;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -7,11 +7,11 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.theworldsmp.server.commands.MessageCommand;
-import com.theworldsmp.server.commands.ReplyCommand;
-import com.theworldsmp.server.events.MoveEvent;
-import com.theworldsmp.server.events.SleepEvent;
-import com.theworldsmp.server.utils.MessageHandler;
+import com.theworldsmp.survival.commands.MessageCommand;
+import com.theworldsmp.survival.commands.ReplyCommand;
+import com.theworldsmp.survival.events.MoveEvent;
+import com.theworldsmp.survival.events.SleepEvent;
+import com.theworldsmp.survival.utils.MessageHandler;
 
 public class Survival extends JavaPlugin {
 

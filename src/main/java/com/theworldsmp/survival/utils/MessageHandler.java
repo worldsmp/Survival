@@ -1,10 +1,10 @@
-package com.theworldsmp.server.utils;
+package com.theworldsmp.survival.utils;
 
 import java.util.HashMap;
 
 import org.bukkit.entity.Player;
 
-import com.theworldsmp.server.Survival;
+import com.theworldsmp.survival.Survival;
 
 public class MessageHandler {
 

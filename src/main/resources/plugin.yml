@@ -1,8 +1,8 @@
-name: worldSurvival
-version: 1.1.1
+name: Survival
+version: 1.1.2
 description: WorldSMP survival plugin.
 author: Spacey
-main: com.theworldsmp.server.Survival
+main: com.theworldsmp.survival.Survival
 api-version: 1.14
 commands:
   message:

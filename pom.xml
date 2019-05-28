@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.theworldsmp.server</groupId>
+	<groupId>com.theworldsmp.survival</groupId>
 	<artifactId>Survival</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<packaging>jar</packaging>
 
 	<name>Survival</name>
@@ -19,17 +19,17 @@
 
 	<repositories>
 		<repository>
-			<id>spigot-repo</id>
-			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		    <id>papermc</id>
+		    <url>https://papermc.io/repo/repository/maven-public/</url>
 		</repository>
 	</repositories>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.spigotmc</groupId>
-			<artifactId>spigot</artifactId>
-			<version>1.14-R0.1-SNAPSHOT</version>
-			<scope>provided</scope>
-		</dependency>
+		    <groupId>com.destroystokyo.paper</groupId>
+		    <artifactId>paper-api</artifactId>
+		    <version>1.14.2-R0.1-SNAPSHOT</version>
+		    <scope>provided</scope>
+		 </dependency>
 	</dependencies>
 </project>
