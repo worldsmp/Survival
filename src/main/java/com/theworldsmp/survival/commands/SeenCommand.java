@@ -34,7 +34,6 @@ public class SeenCommand implements CommandExecutor {
 			try {
 				player = UUIDFetcher.getUUID(args[0]).toString();
 			} catch (final Exception e) {
-				e.printStackTrace();
 				sender.sendMessage(ChatColor.RED + "Couldn't fetch UUID from API. Invalid player?");
 				return false;
 			}
