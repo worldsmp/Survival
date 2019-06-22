@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.theworldsmp.survival.commands.HeadCommand;
 import com.theworldsmp.survival.commands.MessageCommand;
 import com.theworldsmp.survival.commands.ReplyCommand;
 import com.theworldsmp.survival.commands.SeenCommand;
@@ -43,6 +44,7 @@ public class Survival extends JavaPlugin {
 		getCommand("message").setExecutor(new MessageCommand(this));
 		getCommand("reply").setExecutor(new ReplyCommand(this));
 		getCommand("seen").setExecutor(new SeenCommand());
+		getCommand("head").setExecutor(new HeadCommand());
 		loadRecipes();
 	}
 
@@ -62,8 +64,8 @@ public class Survival extends JavaPlugin {
 	}
 
 	private void loadRecipes() {
-		createShapelessRecipe(Material.QUARTZ_BLOCK, 4, "quartz_recipe_key", Material.QUARTZ, 4);
-		createShapelessRecipe(Material.BRICKS, 4, "bricks_recipe_key", Material.BRICK, 4);
+		//createShapelessRecipe(Material.QUARTZ_BLOCK, 4, "quartz_recipe_key", Material.QUARTZ, 4);
+		//createShapelessRecipe(Material.BRICKS, 4, "bricks_recipe_key", Material.BRICK, 4);
 	}
 
 	public MessageHandler getMessageHandler() {return handler; }

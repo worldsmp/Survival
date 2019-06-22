@@ -17,7 +17,6 @@ public class SeenCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
 		if (!sender.hasPermission("worldsmp.seen")) {
-
 			sender.sendMessage(ChatColor.RED + "No permission.");
 			return false;
 		}
