@@ -1,5 +1,6 @@
 package com.theworldsmp.survival.events;
 
+import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -30,7 +31,7 @@ public class MoveEvent implements Listener {
 		final Material crop = block.getType();
 		final BlockData bdata = block.getBlockData();
 
-		if(bdata instanceof Ageable && p.getEquipment().getItemInMainHand().getType().equals(Material.DIAMOND_HOE)){
+		if(bdata instanceof Ageable && p.getEquipment().getItemInMainHand().getType().equals(Material.DIAMOND_HOE) && p.getGameMode() == GameMode.SURVIVAL){
 			final Ageable age = (Ageable) bdata;
 			if(age.getAge() == age.getMaximumAge()){
 				block.breakNaturally();
