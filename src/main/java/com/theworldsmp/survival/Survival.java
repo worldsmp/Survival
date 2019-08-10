@@ -1,6 +1,7 @@
 package com.theworldsmp.survival;
 
 import java.io.File;
+import java.io.IOException;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -14,6 +15,7 @@ import com.theworldsmp.survival.commands.HeadCommand;
 import com.theworldsmp.survival.commands.MessageCommand;
 import com.theworldsmp.survival.commands.ReplyCommand;
 import com.theworldsmp.survival.commands.SeenCommand;
+import com.theworldsmp.survival.events.JoinEvent;
 import com.theworldsmp.survival.events.MoveEvent;
 import com.theworldsmp.survival.events.QuitEvent;
 import com.theworldsmp.survival.events.SleepEvent;
@@ -33,13 +35,19 @@ public class Survival extends JavaPlugin {
 		instance = this;
 		handler = new MessageHandler(this);
 
-		this.config = getConfig();
-		this.config.options().copyDefaults(true);
-		this.conf.setup(this);
+		config = getConfig();
+		config.options().copyDefaults(true);
+
+		try {
+			conf.setup(this);
+		} catch (final IOException e) {
+			e.printStackTrace();
+		}
 
 		Bukkit.getPluginManager().registerEvents(new SleepEvent(this), this);
-		Bukkit.getPluginManager().registerEvents(new MoveEvent(this), this);
+		Bukkit.getPluginManager().registerEvents(new MoveEvent(), this);
 		Bukkit.getPluginManager().registerEvents(new QuitEvent(), this);
+		Bukkit.getPluginManager().registerEvents(new JoinEvent(), this);
 
 		getCommand("message").setExecutor(new MessageCommand(this));
 		getCommand("reply").setExecutor(new ReplyCommand(this));
@@ -51,6 +59,7 @@ public class Survival extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		instance = null;
+		Bukkit.resetRecipes();
 	}
 
 	public void createShapelessRecipe(Material outputItem, int outputAmount, String key, Material inputItem, int inputAmount) {
@@ -64,8 +73,8 @@ public class Survival extends JavaPlugin {
 	}
 
 	private void loadRecipes() {
-		//createShapelessRecipe(Material.QUARTZ_BLOCK, 4, "quartz_recipe_key", Material.QUARTZ, 4);
-		//createShapelessRecipe(Material.BRICKS, 4, "bricks_recipe_key", Material.BRICK, 4);
+		createShapelessRecipe(Material.QUARTZ_BLOCK, 4, "quartz_recipe_key", Material.QUARTZ, 4);
+		createShapelessRecipe(Material.BRICKS, 4, "bricks_recipe_key", Material.BRICK, 4);
 	}
 
 	public MessageHandler getMessageHandler() {return handler; }

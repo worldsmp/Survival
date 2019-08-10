@@ -11,16 +11,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-import com.theworldsmp.survival.Survival;
-
 public class MoveEvent implements Listener {
-
-	@SuppressWarnings("unused")
-	private final Survival plugin;
-
-	public MoveEvent(Survival plugin) {
-		this.plugin = plugin;
-	}
 
 	@EventHandler
 	public void onCropWalk(PlayerMoveEvent e) {

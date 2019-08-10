@@ -1,5 +1,6 @@
 package com.theworldsmp.survival.events;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -13,7 +14,7 @@ public class QuitEvent implements Listener {
 	ConfigHandler conf = ConfigHandler.getInstance();
 
 	@EventHandler
-	public void onLeave(PlayerQuitEvent e) {
+	public void onLeave(PlayerQuitEvent e) throws IOException {
 		final String p = e.getPlayer().getUniqueId().toString();
 
 		final Date now = new Date();
